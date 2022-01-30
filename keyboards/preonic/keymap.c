@@ -85,18 +85,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
     *   ║          │          │          │          │          │   Mute   │   Play   │          │  Effect- │  Effect+ │  Rainbow │   Swirl  ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │          │          │          │          │   Vol-   │   Vol+   │          │   Sat-   │   Sat+   │   Snake  │Knight Rid║
+    *   ║          │          │          │          │          │   Vol-   │   Vol+   │          │   Hue-   │   Hue+   │   Snake  │Knight Rid║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │          │          │          │          │ Bright-  │ Bright+  │          │   Hue-   │   Hue+   │ Christmas│ Gradient ║
+    *   ║          │          │          │          │          │ Bright-  │ Bright+  │          │   Sat-   │   Sat+   │ Christmas│ Gradient ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │    ▼     │          │          │    ▼     │RGB Toggle│RGB Toggle│    ▼     │ RGB Brt- │ RGB Brt+ │   Test   │RGB Toggle║
+    *   ║          │    ▼     │          │          │    ▼     │RGB Toggle│RGB Toggle│    ▼     │  Value-  │  Value+  │   Test   │RGB Toggle║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [_L_MEDIA] = LAYOUT_ortho_5x12(
         XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_MPRV,   KC_MNXT,   XXXXXXX,   RGB_RMOD,  RGB_MOD,   RGB_M_P,   RGB_M_B,
         XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_MUTE,   KC_MPLY,   XXXXXXX,   RGB_SPD,   RGB_SPI,   RGB_M_R,   RGB_M_SW,
-        XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_VOLD,   KC_VOLU,   XXXXXXX,   RGB_SAD,   RGB_SAI,   RGB_M_SN,  RGB_M_K,
-        XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_BRID,   KC_BRIU,   XXXXXXX,   RGB_HUD,   RGB_HUI,   RGB_M_X,   RGB_M_G,
+        XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_VOLD,   KC_VOLU,   XXXXXXX,   RGB_HUD,   RGB_HUI,   RGB_M_SN,  RGB_M_K,
+        XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_BRID,   KC_BRIU,   XXXXXXX,   RGB_SAD,   RGB_SAI,   RGB_M_X,   RGB_M_G,
         XXXXXXX,  _______,   XXXXXXX,    XXXXXXX,   _______,   RGB_TOG,   RGB_TOG,   _______,   RGB_VAD,   RGB_VAI,   RGB_M_T,   RGB_TOG
     ),
 };
