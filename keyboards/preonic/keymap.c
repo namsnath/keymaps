@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
     *   ║  ( Shift │   Z      │   X      │   C      │   V      │   B      │   N      │   M      │   ,  <   │   .  >   │   /  ?   │  ( Shift ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║  { Ctrl  │   MEDIA  │  [ Alt   │   Super  │   LOWER  │   Space  │   Space  │   RAISE  │   Super  │  ] Alt   │   MEDIA  │  { Ctrl  ║
+    *   ║  { Ctrl  │   MEDIA  │  [ Alt   │   Super  │   LOWER  │  Space   │  Space   │   RAISE  │   Super  │  ] Alt   │   MEDIA  │  { Ctrl  ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [_L_BASE] = LAYOUT_ortho_5x12(
@@ -41,43 +41,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     /* Lower Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
-    *   ║          │          │          │          │          │  PrntScr │  PrntScr │   =  +   │   _      │   +      │   -      │   Bksp   ║
+    *   ║   F11    │   F1     │   F2     │   F3     │   F4     │   F5     │   F6     │   F7     │   F8     │   F9     │   F10    │   Bksp   ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║   F1     │   F2     │   F3     │   F4     │          │   Ins    │   Del    │          │   7      │   8      │   9      │   Enter  ║
+    *   ║   F12    │          │          │          │          │  PrntScr │  PrntScr │    +     │   7      │   8      │   9      │    *     ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║   F5     │   F6     │   F7     │   F8     │          │   Home   │   End    │          │   4      │   5      │   6      │   *      ║
+    *   ║          │          │          │          │          │   Home   │   End    │    -     │   4      │   5      │   6      │    /     ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║   F9     │   F10    │   F11    │   F12    │          │   PgUp   │   PgDwn  │          │   1      │   2      │   3      │   /  ?   ║
+    *   ║          │          │          │          │  Insert  │   PgUp   │  PgDwn   │  Delete  │   1      │   2      │   3      │          ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │    ▼     │   \  |   │   |      │    ▼     │   Space  │   Space  │    ▼     │   Super  │   0      │   .  >   │   =  +   ║
+    *   ║          │    ▼     │          │          │    ▼     │  Space   │  Space   │    ▼     │          │   0      │   .  >   │   Enter  ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [_L_LOWER] = LAYOUT_ortho_5x12(
-        XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_PSCR,   KC_PSCR,   KC_EQL,    KC_UNDS,   KC_PLUS,   KC_MINS,   KC_BSPC,
-        KC_F1,    KC_F2,      KC_F3,     KC_F4,     XXXXXXX,   KC_INS,    KC_DEL,    XXXXXXX,   KC_P7,     KC_P8,     KC_P9,     KC_ENT,
-        KC_F5,    KC_F6,      KC_F7,     KC_F8,     XXXXXXX,   KC_HOME,   KC_END,    XXXXXXX,   KC_P4,     KC_P5,     KC_P6,     KC_ASTR,
-        KC_F9,    KC_F10,     KC_F11,    KC_F12,    XXXXXXX,   KC_PGUP,   KC_PGDN,   XXXXXXX,   KC_P1,     KC_P2,     KC_P3,     KC_SLSH,
-        XXXXXXX,  _______,    KC_BSLS,   KC_PIPE,   _______,   KC_SPC,    KC_SPC,    _______,   XXXXXXX,   KC_P0,     KC_DOT,    KC_EQL
+        KC_F11,    KC_F1,      KC_F2,    KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,     KC_F9,     KC_F10,    KC_BSPC,
+        KC_F12,    XXXXXXX,    XXXXXXX,  XXXXXXX,   XXXXXXX,   KC_PSCR,   KC_PSCR,   KC_PLUS,   KC_P7,     KC_P8,     KC_P9,     KC_ASTR,
+        XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,   XXXXXXX,   KC_HOME,   KC_END,    KC_MINS,   KC_P4,     KC_P5,     KC_P6,     KC_SLSH,
+        XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,   KC_INS,    KC_PGUP,   KC_PGDN,   KC_DEL,    KC_P1,     KC_P2,     KC_P3,     XXXXXXX,
+        XXXXXXX,   _______,    XXXXXXX,  XXXXXXX,   _______,   KC_SPC,    KC_SPC,    _______,   XXXXXXX,   KC_P0,     KC_DOT,    KC_ENT
     ),
     /* Raise Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
-    *   ║          │          │          │          │          │          │          │          │          │          │          │          ║
+    *   ║          │          │          │          │          │          │          │          │          │          │          │  Delete  ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │          │          │          │          │          │          │   +      │   Up     │   -      │          │          ║
+    *   ║          │          │          │          │          │          │          │    +     │   Up     │    -     │          │          ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │          │          │          │          │          │          │   Left   │   Down   │   Right  │          │          ║
+    *   ║          │          │    [     │    {     │    (     │    /     │    :     │   Left   │   Down   │   Right  │          │          ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║    ▼     │          │          │          │          │          │          │   _      │          │   =      │          │    ▼     ║
+    *   ║    ▼     │          │    ]     │    }     │    )     │    \     │    |     │    _     │          │    =     │          │    ▼     ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │          │          │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     ║
+    *   ║    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │  Space   │  Space   │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [_L_RAISE] = LAYOUT_ortho_5x12(
-        XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,
+        XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_DEL,
         XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_PLUS,   KC_UP,     KC_MINS,   XXXXXXX,   XXXXXXX,
-        XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_LEFT,   KC_DOWN,   KC_RGHT,   XXXXXXX,   XXXXXXX,
-        _______,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_UNDS,   XXXXXXX,   KC_EQL,    XXXXXXX,   _______,
-        _______,  _______,    _______,   _______,   _______,   XXXXXXX,   XXXXXXX,   _______,   _______,   _______,   _______,   _______
+        XXXXXXX,  XXXXXXX,    KC_LBRC,   KC_LCBR,   KC_LPRN,   KC_SLSH,   KC_COLN,   KC_LEFT,   KC_DOWN,   KC_RGHT,   XXXXXXX,   XXXXXXX,
+        _______,  XXXXXXX,    KC_RBRC,   KC_RCBR,   KC_RPRN,   KC_BSLS,   KC_PIPE,   KC_UNDS,   XXXXXXX,   KC_EQL,    XXXXXXX,   _______,
+        _______,  _______,    _______,   _______,   _______,   KC_SPC,    KC_SPC,   _______,   _______,   _______,   _______,   _______
     ),
     /* Media Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
