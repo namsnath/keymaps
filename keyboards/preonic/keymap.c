@@ -5,14 +5,7 @@
 #define MT_RAPC MT(MOD_RALT, KC_RBRC)
 
 enum preonic_layers {
-    _L_BASE,
-    _L_LOWER,
-    _L_RAISE,
-    _L_MEDIA
-};
-
-enum preonic_keycodes {
-    L_BASE = SAFE_RANGE,
+    L_BASE,
     L_LOWER,
     L_RAISE,
     L_MEDIA
@@ -32,12 +25,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ║   Ctrl   │   MEDIA  │   Alt    │   Super  │   LOWER  │  Space   │  Space   │   RAISE  │   Super  │   Alt    │   MEDIA  │   Ctrl   ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
-    [_L_BASE] = LAYOUT_ortho_5x12(
+    [L_BASE] = LAYOUT_ortho_5x12(
         KC_GRV,    KC_1,      KC_2,      KC_3,      KC_4,      KC_5,      KC_6,      KC_7,      KC_8,      KC_9,      KC_0,      KC_BSPC,
         KC_TAB,    KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,      KC_I,      KC_O,      KC_P,      KC_ENT,
         KC_ESC,    KC_A,      KC_S,      KC_D,      KC_F,      KC_G,      KC_H,      KC_J,      KC_K,      KC_L,      KC_SCLN,   KC_QUOT,
         KC_LSFT,   KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,      KC_N,      KC_M,      KC_COMM,   KC_DOT,    KC_SLSH,   KC_RSFT,
-        KC_LCTL,   MO(3),     KC_LALT,   KC_LGUI,   MO(1),     KC_SPC,    KC_SPC,    MO(2),     KC_LGUI,   KC_RALT,    MO(3),    KC_RCTL
+        KC_LCTL, MO(L_MEDIA), KC_LALT,   KC_LGUI, MO(L_LOWER), KC_SPC,    KC_SPC, MO(L_RAISE),  KC_LGUI,   KC_RALT, MO(L_MEDIA), KC_RCTL
     ),
     /* Lower Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
@@ -52,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ║          │    ▼     │          │          │    ▼     │  Space   │  Space   │    ▼     │          │   0      │   .  >   │   Enter  ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
-    [_L_LOWER] = LAYOUT_ortho_5x12(
+    [L_LOWER] = LAYOUT_ortho_5x12(
         KC_F11,    KC_F1,      KC_F2,    KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,     KC_F9,     KC_F10,    KC_BSPC,
         KC_F12,    XXXXXXX,    XXXXXXX,  XXXXXXX,   XXXXXXX,   KC_PSCR,   KC_PSCR,   KC_PLUS,   KC_P7,     KC_P8,     KC_P9,     KC_ASTR,
         XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,   XXXXXXX,   KC_HOME,   KC_END,    KC_MINS,   KC_P4,     KC_P5,     KC_P6,     KC_SLSH,
@@ -72,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ║    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │  Space   │  Space   │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
-    [_L_RAISE] = LAYOUT_ortho_5x12(
+    [L_RAISE] = LAYOUT_ortho_5x12(
         XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_DEL,
         XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_PLUS,   KC_UP,     KC_MINS,   XXXXXXX,   XXXXXXX,
         XXXXXXX,  XXXXXXX,    KC_LBRC,   KC_LCBR,   KC_LPRN,   KC_SLSH,   KC_COLN,   KC_LEFT,   KC_DOWN,   KC_RGHT,   XXXXXXX,   XXXXXXX,
@@ -92,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ║          │    ▼     │          │          │    ▼     │RGB Toggle│RGB Toggle│    ▼     │  Value-  │  Value+  │   Test   │RGB Toggle║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
-    [_L_MEDIA] = LAYOUT_ortho_5x12(
+    [L_MEDIA] = LAYOUT_ortho_5x12(
         XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_MPRV,   KC_MNXT,   XXXXXXX,   RGB_RMOD,  RGB_MOD,   RGB_M_P,   RGB_M_B,
         XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_MUTE,   KC_MPLY,   XXXXXXX,   RGB_SPD,   RGB_SPI,   RGB_M_R,   RGB_M_SW,
         XXXXXXX,  XXXXXXX,   XXXXXXX,    XXXXXXX,   XXXXXXX,   KC_VOLD,   KC_VOLU,   XXXXXXX,   RGB_HUD,   RGB_HUI,   RGB_M_SN,  RGB_M_K,
