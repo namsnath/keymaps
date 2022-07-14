@@ -27,17 +27,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
     *   ║   Esc    │   A      │   S      │   D      │   F      │   G      │   H      │   J      │   K      │   L      │   ;  :   │   '  "   ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║  ( Shift │   Z      │   X      │   C      │   V      │   B      │   N      │   M      │   ,  <   │   .  >   │   /  ?   │  ( Shift ║
+    *   ║   Shift  │   Z      │   X      │   C      │   V      │   B      │   N      │   M      │   ,  <   │   .  >   │   /  ?   │   Shift  ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║  { Ctrl  │   MEDIA  │  [ Alt   │   Super  │   LOWER  │  Space   │  Space   │   RAISE  │   Super  │  ] Alt   │   MEDIA  │  { Ctrl  ║
+    *   ║   Ctrl   │   MEDIA  │   Alt    │   Super  │   LOWER  │  Space   │  Space   │   RAISE  │   Super  │   Alt    │   MEDIA  │   Ctrl   ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [_L_BASE] = LAYOUT_ortho_5x12(
         KC_GRV,    KC_1,      KC_2,      KC_3,      KC_4,      KC_5,      KC_6,      KC_7,      KC_8,      KC_9,      KC_0,      KC_BSPC,
         KC_TAB,    KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,      KC_I,      KC_O,      KC_P,      KC_ENT,
         KC_ESC,    KC_A,      KC_S,      KC_D,      KC_F,      KC_G,      KC_H,      KC_J,      KC_K,      KC_L,      KC_SCLN,   KC_QUOT,
-        KC_LSPO,   KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,      KC_N,      KC_M,      KC_COMM,   KC_DOT,    KC_SLSH,   KC_RSPC,
-        KC_LCPO,   MO(3),     MT_LAPO,   KC_LGUI,   MO(1),     KC_SPC,    KC_SPC,    MO(2),     KC_LGUI,   MT_RAPC,   MO(3),     KC_RCPC
+        KC_LSFT,   KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,      KC_N,      KC_M,      KC_COMM,   KC_DOT,    KC_SLSH,   KC_RSFT,
+        KC_LCTL,   MO(3),     KC_LALT,   KC_LGUI,   MO(1),     KC_SPC,    KC_SPC,    MO(2),     KC_LGUI,   KC_RALT,    MO(3),    KC_RCTL
     ),
     /* Lower Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_PLUS,   KC_UP,     KC_MINS,   XXXXXXX,   XXXXXXX,
         XXXXXXX,  XXXXXXX,    KC_LBRC,   KC_LCBR,   KC_LPRN,   KC_SLSH,   KC_COLN,   KC_LEFT,   KC_DOWN,   KC_RGHT,   XXXXXXX,   XXXXXXX,
         _______,  XXXXXXX,    KC_RBRC,   KC_RCBR,   KC_RPRN,   KC_BSLS,   KC_PIPE,   KC_UNDS,   XXXXXXX,   KC_EQL,    XXXXXXX,   _______,
-        _______,  _______,    _______,   _______,   _______,   KC_SPC,    KC_SPC,   _______,   _______,   _______,   _______,   _______
+        _______,  _______,    _______,   _______,   _______,   KC_SPC,    KC_SPC,    _______,   _______,   _______,   _______,   _______
     ),
     /* Media Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
