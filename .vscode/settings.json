@@ -1,5 +1,9 @@
 {
     "git.ignoredRepositories": [
         "./qmk_firmware"
+    ],
+    "editor.rulers": [
+        // Preonic
+        8, 19, 30, 41, 52, 63, 74, 85, 96, 107, 118, 129,
     ]
 }
