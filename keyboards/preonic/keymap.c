@@ -46,11 +46,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [L_LOWER] = LAYOUT_ortho_5x12(
-        KC_F11,    KC_F1,      KC_F2,    KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,     KC_F9,     KC_F10,    _______,
-        KC_F12,    XXXXXXX,    XXXXXXX,  XXXXXXX,   XXXXXXX,   KC_PSCR,   KC_PSCR,   KC_PLUS,   KC_P7,     KC_P8,     KC_P9,     KC_ASTR,
-        XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,   XXXXXXX,   KC_HOME,   KC_END,    KC_MINS,   KC_P4,     KC_P5,     KC_P6,     KC_SLSH,
-        XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,   KC_INS,    KC_PGUP,   KC_PGDN,   KC_DEL,    KC_P1,     KC_P2,     KC_P3,     XXXXXXX,
-        XXXXXXX,   _______,    XXXXXXX,  XXXXXXX,   _______,   _______,   _______,   _______,   XXXXXXX,   KC_P0,     KC_DOT,    KC_ENT
+        KC_F11,    KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,     KC_F9,     KC_F10,    _______,
+        KC_F12,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_PSCR,   KC_PSCR,   KC_PLUS,   KC_P7,     KC_P8,     KC_P9,     KC_ASTR,
+        XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_HOME,   KC_END,    KC_MINS,   KC_P4,     KC_P5,     KC_P6,     KC_SLSH,
+        XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_INS,    KC_PGUP,   KC_PGDN,   KC_DEL,    KC_P1,     KC_P2,     KC_P3,     XXXXXXX,
+        XXXXXXX,   _______,   XXXXXXX,   XXXXXXX,   _______,   _______,   _______,   _______,   XXXXXXX,   KC_P0,     KC_DOT,    KC_ENT
     ),
     /* Raise Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
