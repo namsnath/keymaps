@@ -56,21 +56,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
     *   ║          │          │          │          │          │          │          │          │          │          │          │    ▼     ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │          │          │          │          │          │          │    +     │   Up     │    -     │          │          ║
+    *   ║          │          │          │    [     │    ]     │          │          │    +     │   Up     │    -     │          │          ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║          │          │    [     │    {     │    (     │    /     │    :     │   Left   │   Down   │   Right  │          │          ║
+    *   ║          │          │          │    (     │    )     │    /     │    :     │   Left   │   Down   │   Right  │          │          ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
-    *   ║    ▼     │          │    ]     │    }     │    )     │    \     │    |     │    _     │          │    =     │          │    ▼     ║
+    *   ║    ▼     │          │          │    {     │    }     │    \     │    |     │    _     │          │    =     │          │    ▼     ║
     *   ╟──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╢
     *   ║    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     │    ▼     ║
     *   ╚══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╧══════════╝
     */
     [L_RAISE] = LAYOUT_ortho_5x12(
-        XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   _______,
-        XXXXXXX,  XXXXXXX,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_PLUS,   KC_UP,     KC_MINS,   XXXXXXX,   XXXXXXX,
-        XXXXXXX,  XXXXXXX,    KC_LBRC,   KC_LCBR,   KC_LPRN,   KC_SLSH,   KC_COLN,   KC_LEFT,   KC_DOWN,   KC_RGHT,   XXXXXXX,   XXXXXXX,
-        _______,  XXXXXXX,    KC_RBRC,   KC_RCBR,   KC_RPRN,   KC_BSLS,   KC_PIPE,   KC_UNDS,   XXXXXXX,   KC_EQL,    XXXXXXX,   _______,
-        _______,  _______,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______
+        XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,  XXXXXXX,    _______,
+        XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_LBRC,   KC_RBRC,   XXXXXXX,   XXXXXXX,   KC_PLUS,   KC_UP,      KC_MINS,  XXXXXXX,    XXXXXXX,
+        XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_LPRN,   KC_RPRN,   KC_SLSH,   KC_COLN,   KC_LEFT,   KC_DOWN,    KC_RGHT,  XXXXXXX,    XXXXXXX,
+        _______,   XXXXXXX,   XXXXXXX,   KC_LCBR,   KC_RCBR,   KC_BSLS,   KC_PIPE,   KC_UNDS,   XXXXXXX,    KC_EQL,   XXXXXXX,    _______,
+        _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,    _______,  _______,    _______
     ),
     /* Media Layer
     *   ╔══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╤══════════╗
